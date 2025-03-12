@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { BsGithub, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsMenuButton, BsTwitter, BsYoutube,} from "react-icons/bs";
+import { IoMdMenu } from "react-icons/io";
+import { MdClear } from "react-icons/md";
 
 const Navbar = () => {
 
@@ -66,6 +68,66 @@ const Navbar = () => {
           <BsTwitter />
         </li>
       </ul>
+      {isOpen ? <MdClear className="block md:hidden text-4xl" onClick = {Menu} /> : <IoMdMenu className="block md:hidden text-4xl"  onClick = {Menu}/>}
+      
+      {isOpen &&
+      (
+        <div className={`fixed right-0 top-[84px] flex w-1/2 flex-col items-start justify-start gap-10 border-1 border-gray-800 bg-black ${isOpen ? "block" :"hidden"}`}>
+           
+           <ul className="flex flex-col gap-8 px-8 py-5">
+           <li>
+          <a
+            href="#home"
+            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#tech"
+            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+          >
+            Tech
+          </a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+          >
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+          >
+            Contact
+          </a>
+        </li>
+           </ul>
+
+           <ul className="flex flex-wrap gap-5 px-15 my-5">
+        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
+          <BsYoutube />
+        </li>
+
+        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
+          <BsLinkedin />
+        </li>
+
+        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-white hover:opacity-100">
+          <BsGithub />
+        </li>
+
+        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+          <BsTwitter />
+        </li>
+      </ul>
+        </div>
+      )}
     </nav>
   );
 };
