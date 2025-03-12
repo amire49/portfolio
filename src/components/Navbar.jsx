@@ -1,6 +1,12 @@
-import { BsGithub, BsInstagram, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { useState } from "react";
+import { BsGithub, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 
 const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false)
+  const Menu = () => {
+     setIsOpen(!isOpen)
+  }
   return (
     <nav className="fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray bg-black/70 px-16 py-6 text-white backdrop-blur-md md:justify-evenly">
       <a
