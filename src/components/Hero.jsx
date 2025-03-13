@@ -8,9 +8,9 @@ const Hero = () => {
     >
       <div className="flex flex-col items-center justify-center text-white gap-10">
         <motion.div 
-          initial{{y:-50, opacity:0}}
-        animate{{y: 0, opacity:1}}
-        transition{{duration: 0.8, delay:0.2}}
+          initial{{ y:-50, opacity:0 }}
+        animate{{ y: 0, opacity:1 }}
+        transition{{ duration: 0.8, delay:0.2 }}
         
         
         >
