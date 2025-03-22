@@ -74,7 +74,7 @@ const Navbar = () => {
       (
         <div className={`fixed right-0 top-[84px] flex w-1/2 flex-col items-start justify-start gap-10 border-1 border-gray-800 bg-black ${isOpen ? "block" :"hidden"}`}>
            
-           <ul className="flex flex-col gap-8 px-8 py-5">
+           <ul className="flex flex-col gap-4 px-8 py-5">
            <li>
           <a
             href="#home"
