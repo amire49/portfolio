@@ -32,9 +32,7 @@ const Hero = () => {
             Software Engineer
           </h2>
           <p className="md:text-base text-pretty text-sm text-gray-400">
-            Passionate software engineer with expertise in web development and a strong foundation in computer science. 
-            Skilled in creating responsive, user-friendly applications using modern technologies like React, Node.js, 
-            and cloud platforms. Committed to writing clean, efficient code and staying current with industry best practices. 
+          Passionate software engineer crafting seamless, user-friendly web experiences with modern tech like React, Node.js, and cloud platforms. Dedicated to clean, efficient code and continuous learning.
             
           </p>
         </motion.div>
