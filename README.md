@@ -32,7 +32,7 @@ A modern, responsive portfolio website built with React and Tailwind CSS.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/amire49/portfolio.git
 ```
 
 2. Install dependencies:
