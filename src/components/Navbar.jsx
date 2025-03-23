@@ -22,11 +22,11 @@ const Navbar = () => {
       >
         Amire
       </a>
-      <ul className="hidden md:flex gap-10">
+      <ul className="hidden items-center gap-8 md:flex">
         <li>
           <a
             href="#home"
-            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+            className="cursor-pointer opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
           >
             Home
           </a>
@@ -34,7 +34,7 @@ const Navbar = () => {
         <li>
           <a
             href="#tech"
-            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+            className="cursor-pointer opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
           >
             Tech
           </a>
@@ -42,7 +42,7 @@ const Navbar = () => {
         <li>
           <a
             href="#projects"
-            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+            className="cursor-pointer opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
           >
             Projects
           </a>
@@ -50,91 +50,103 @@ const Navbar = () => {
         <li>
           <a
             href="#contact"
-            className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+            className="cursor-pointer opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
           >
             Contact
           </a>
         </li>
       </ul>
-      <ul className="hidden md:flex gap-5">
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
-          <BsYoutube />
-        </li>
-
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-          <BsLinkedin />
-        </li>
-
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-white hover:opacity-100">
-          <BsGithub />
-        </li>
-
+      <ul className="hidden items-center gap-6 md:flex">
         <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
-          <BsTwitter />
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <BsLinkedin />
+          </a>
+        </li>
+        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <BsGithub />
+          </a>
+        </li>
+        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <BsTwitter />
+          </a>
         </li>
       </ul>
-      {isOpen ? (
-        <MdClear className="block md:hidden text-4xl" onClick={Menu} />
-      ) : (
-        <IoMdMenu className="block md:hidden text-4xl" onClick={Menu} />
-      )}
+      <button 
+        className="block text-4xl transition-all duration-300 hover:text-sky-500 md:hidden" 
+        onClick={Menu}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+      >
+        {isOpen ? <MdClear /> : <IoMdMenu />}
+      </button>
 
       {isOpen && (
         <div
-          className={`fixed right-0 top-[84px] flex w-1/2 flex-col items-start justify-start gap-10 border-1 border-gray-800 bg-black ${isOpen ? "block" : "hidden"}`}
+          className={`fixed right-0 top-[84px] flex w-[250px] flex-col items-start justify-start gap-6 rounded-bl-2xl border-b border-l border-gray-800/50 bg-black/95 backdrop-blur-sm ${
+            isOpen ? "block" : "hidden"
+          }`}
         >
-          <ul className="flex flex-col gap-4 px-8 py-5">
+          <ul className="flex w-full flex-col gap-4 px-8 py-5">
             <li>
               <a
                 href="#home"
-                className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+                className="flex items-center gap-2 opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
+                onClick={Menu}
               >
-                Home
+                <span className="text-sky-500">•</span> Home
               </a>
             </li>
             <li>
               <a
                 href="#tech"
-                className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+                className="flex items-center gap-2 opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
+                onClick={Menu}
               >
-                Tech
+                <span className="text-sky-500">•</span> Tech
               </a>
             </li>
             <li>
               <a
                 href="#projects"
-                className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+                className="flex items-center gap-2 opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
+                onClick={Menu}
               >
-                Projects
+                <span className="text-sky-500">•</span> Projects
               </a>
             </li>
             <li>
               <a
                 href="#contact"
-                className="cursor-pointer opacity-70 transition all duraation-300 hover:opacity-100"
+                className="flex items-center gap-2 opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100"
+                onClick={Menu}
               >
-                Contact
+                <span className="text-sky-500">•</span> Contact
               </a>
             </li>
           </ul>
-
-          <ul className="flex flex-wrap gap-5 px-15 my-5">
-            <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
-              <BsYoutube />
-            </li>
-
-            <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-              <BsLinkedin />
-            </li>
-
-            <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-white hover:opacity-100">
-              <BsGithub />
-            </li>
-
-            <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
-              <BsTwitter />
-            </li>
-          </ul>
+          
+          {/* Social Icons for Mobile */}
+          <div className="w-full border-t border-gray-800/50 px-8 py-4">
+            <p className="mb-3 text-sm text-gray-400">Connect with me</p>
+            <ul className="flex items-center justify-start gap-6">
+              <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                  <BsLinkedin />
+                </a>
+              </li>
+              <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                  <BsGithub />
+                </a>
+              </li>
+              <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+                  <BsTwitter />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
     </nav>
