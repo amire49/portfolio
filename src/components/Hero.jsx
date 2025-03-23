@@ -7,7 +7,7 @@ const Hero = () => {
       className="px-16 flex min-h-screen w-full items-center justify-center py-28 md:px-32"
     >
       <div className="flex flex-col items-center justify-center text-white gap-10">
-        <motion.div 
+        <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -19,7 +19,7 @@ const Hero = () => {
           />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -32,8 +32,10 @@ const Hero = () => {
             Software Engineer
           </h2>
           <p className="md:text-base text-pretty text-sm text-gray-400">
-          Passionate software engineer crafting seamless, user-friendly web experiences with modern tech like React, Node.js, and cloud platforms. Dedicated to clean, efficient code and continuous learning.
-            
+            Passionate software engineer crafting seamless, user-friendly web
+            experiences with modern tech like React, Node.js, and cloud
+            platforms. Dedicated to clean, efficient code and continuous
+            learning.
           </p>
         </motion.div>
       </div>

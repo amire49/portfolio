@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  <text x="100" y="250" fill="white" font-family="Poppins" font-size="72" font-weight="bold">
+    Amir Naser
+  </text>
+  <text x="100" y="350" fill="white" font-family="Poppins" font-size="48">
+    Software Engineer
+  </text>
+  <text x="100" y="450" fill="rgba(255,255,255,0.8)" font-family="Poppins" font-size="32">
+    React • Node.js • TypeScript • Modern Web Development
+  </text>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+  </defs>
+</svg>

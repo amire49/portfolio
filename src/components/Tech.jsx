@@ -1,4 +1,11 @@
-import { BiLogoTypescript, BiLogoReact, BiLogoTailwindCss, BiLogoHtml5, BiLogoMongodb, BiLogoNodejs } from "react-icons/bi";
+import {
+  BiLogoTypescript,
+  BiLogoReact,
+  BiLogoTailwindCss,
+  BiLogoHtml5,
+  BiLogoMongodb,
+  BiLogoNodejs,
+} from "react-icons/bi";
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 
@@ -21,10 +28,7 @@ const Tech = () => {
       </h1>
       <div className="grid grid-cols-2 gap-10 p-5 sm:grid-cols-3 md:grid-cols-4">
         {technologies.map((tech, index) => (
-          <div
-            key={index}
-            className="group flex flex-col items-center gap-2"
-          >
+          <div key={index} className="group flex flex-col items-center gap-2">
             <tech.icon
               className={`cursor-pointer text-[80px] ${tech.color} transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]`}
             />
